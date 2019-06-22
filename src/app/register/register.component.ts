@@ -27,7 +27,6 @@ export class RegisterComponent implements OnInit {
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
             fullName: ['', Validators.required],
-            // lastName: ['', Validators.required],
             email: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]]
         });
@@ -53,7 +52,7 @@ export class RegisterComponent implements OnInit {
             .subscribe(
                 data => {
                     this.alertService.success('Registrado com sucesso', true);
-                    this.router.navigate(['/login'], { queryParams: { registered: true }});
+                    this.router.navigate(['/login']);
                 },
                 error => {
                     this.alertService.error(error);
