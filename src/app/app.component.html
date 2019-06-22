@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Sair</a>
+        <a class="nav-item nav-link" (click)="logout()" style="cursor: pointer">Sair</a>
     </div>
 </nav>
 
@@ -10,18 +10,8 @@
 <div class="container" style="height: 100vh">
     <div class="row" style="height: 100%">
         <div class="col-sm-8 offset-sm-2">
-            <alert><</alert>
+            <alert></alert>
             <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-<!-- <div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 offset-sm-2">
-                <alert><</alert>
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </div>
-</div> -->
