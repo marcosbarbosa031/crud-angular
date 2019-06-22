@@ -28,6 +28,9 @@ export class HomeComponent implements OnInit {
     private loadAllUsers() {
         this.userService.getAll()
             .pipe(first())
-            .subscribe(users => this.users = users);
+            .subscribe(users => {
+                localStorage.setItem('users', JSON.stringify(users));
+                this.users = users;
+            });
     }
 }
